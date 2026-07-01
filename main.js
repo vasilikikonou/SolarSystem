@@ -59,7 +59,7 @@ let allplanets =
 const loader = new GLTFLoader(); // Create a loader instance
 
 export function loadPlanet(scene, loader, fileName, position, scale) {
-  loader.load(`/${fileName}.glb`, function (gltf) {
+  loader.load(`${fileName}.glb`, function (gltf) {
     let planet = gltf.scene;
     planet.position.set(position.x, position.y, position.z); // position
     planet.scale.set(scale.x, scale.y, scale.z); // scale
@@ -100,7 +100,7 @@ scene.add(Sunsphere);
 
 // galaxy geometry
 const starGeometry = new THREE.SphereGeometry(90, 94, 94);
-const gtexture = new THREE.TextureLoader().load("/galaxy1.png");
+const gtexture = new THREE.TextureLoader().load("galaxy1.png");
 
 // galaxy material
 const starMaterial = new THREE.MeshBasicMaterial({
