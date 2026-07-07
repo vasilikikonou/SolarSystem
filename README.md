@@ -10,10 +10,6 @@ Solar System 3d website, using _three.js_ and _vite_
   * Download files or clone the repository
   * Run: `npm install`   
   * Run: `npm run dev`
-    
-## Webiste
-[ solarsystemv.000webhostapp.com
-](https://solarsystemv.000webhostapp.com/)
 
 ---
 ###### 2024 © 3d models from Nasa
