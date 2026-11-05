@@ -61,12 +61,8 @@ let allplanets =
 //HOME BUTTON
 document.addEventListener("DOMContentLoaded", function () {
   const homeButton = document.getElementById("homeButton");
-  // Check if it's the homepage and hide the button
-  if (window.location.pathname === '' || window.location.pathname === '/') {
-    homeButton.style.visibility = 'hidden';
-  } else {
-    homeButton.style.visibility = 'visible';
-  }
+  // Each page load starts with the full solar system, including on GitHub Pages.
+  homeButton.style.visibility = 'hidden';
   const navbarItems = document.querySelectorAll(".navbar a");  // Select all links inside navbar
 
   // Add click event listener to all navbar links
@@ -78,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to navigate to home page
   function goToHomePage() {
-    window.location.href = "/";
+    window.location.href = import.meta.env.BASE_URL;
   }
 
   document.getElementById("homeButton").addEventListener("click", goToHomePage);

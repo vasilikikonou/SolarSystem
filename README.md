@@ -11,5 +11,12 @@ Solar System 3d website, using _three.js_ and _vite_
   * Run: `npm install`   
   * Run: `npm run dev`
 
+## Production build and preview
+
+```sh
+npm ci
+npm run build
+npm run preview
+```
 ---
 ###### 2024 © 3d models from Nasa

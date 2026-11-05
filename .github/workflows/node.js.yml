@@ -1,5 +1,5 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+# Build the Vite app and deploy only its production output to GitHub Pages.
+name: Build and deploy to GitHub Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -21,7 +21,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # Single deploy job since we're just deploying
+  # Build and deploy the production site in one job.
   deploy:
     environment:
       name: github-pages
@@ -39,10 +39,6 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
-      - name: Copy main
-        run: cp main.js dist/
-      - name: Copy planets   
-        run: cp planets.js dist/
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
